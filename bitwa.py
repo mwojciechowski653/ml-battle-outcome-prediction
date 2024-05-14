@@ -88,6 +88,8 @@ def zwiad(budzet, zwiady, armia_przeciwnika):
     except ValueError:
         print("Podales inny typ danych niz liczba")
         return
+    
+    return budzet, zwiady
 
 
 def obsadzanie_wojskiem(budzet, armia):
@@ -120,21 +122,21 @@ def obsadzanie_wojskiem(budzet, armia):
                         print("Podana liczebnosc nie moze byc ujemna!")
                 elif typ_jednostki.lower() == "artylerzysci":
                     if liczebnosc >= 0:
-                        if liczebnosc * 2 > budzet:
+                        if liczebnosc * 1.5 > budzet:
                             print("Przekroczyles swoj budzet")
                         else:
                             armia.append([typ_jednostki.lower(), liczebnosc])
-                            budzet = budzet - liczebnosc * 2
+                            budzet = budzet - liczebnosc * 1.5
                             v = 0
                     else:
                         print("Podana liczebnosc nie moze byc ujemna!")
                 elif typ_jednostki.lower() == "konnica":
                     if liczebnosc >= 0:
-                        if liczebnosc * 3 > budzet:
+                        if liczebnosc * 2 > budzet:
                             print("Przekroczyles swoj budzet")
                         else:
                             armia.append([typ_jednostki.lower(), liczebnosc])
-                            budzet = budzet - liczebnosc * 3
+                            budzet = budzet - liczebnosc * 2
                             v = 0
                     else:
                         print("Podana liczebnosc nie moze byc ujemna!")
@@ -189,7 +191,7 @@ def bitwa(kierunek, armia, armia_przeciwnika):
     time.sleep(3)
 
 
-def bitwa():
+def bitwaGlowna():
     budzet = 1000
     zwiady = 0
     armia_przeciwnika = 0
@@ -224,7 +226,7 @@ def bitwa():
         imie = input()
         print("Masz do dyspozycji:", budzet, "złotych monet")
 
-        zwiad(budzet, zwiady, armia_przeciwnika)
+        budzet, zwiady = zwiad(budzet, zwiady, armia_przeciwnika)
 
         obsadzanie_wojskiem(budzet, armia)
 
