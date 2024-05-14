@@ -1,0 +1,5 @@
+Wyniki:
+['Piotrek',4],
+['Marcin', 1],
+['Janek', 1],
+['Kasia', 1],
