@@ -1,5 +1,4 @@
 Wyniki:
-['Piotrek',4],
-['Marcin', 1],
-['Janek', 1],
-['Kasia', 1],
+Marcin: 7.0 zwiady:3,
+Marcin: 136.0 zwiady:3,
+lilax999: 2.0 zwiady:3,
