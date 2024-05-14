@@ -1,4 +1,5 @@
-import bitwa
+from bitwa import bitwa
+from generatorBitw import bitwy
 
 t = 1
 while t == 1:
@@ -6,13 +7,15 @@ while t == 1:
     print("2 - Bitwa - generowanie 1000 recordow")
     print("1 - Bitwa")
     print("0 - zakoncz program")
-    x = input()
+    x = input("")
     try:
+        print("jestem")
         x = int(x)
+        print("jestem2")
         if x == 1:
             bitwa()
         elif x == 2:
-            bitwa()
+            bitwy(1000)
         elif x == 0:
             t = 0
         else:

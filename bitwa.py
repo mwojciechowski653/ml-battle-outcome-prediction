@@ -5,11 +5,12 @@ import time
 def losowanie_armii(x):
     armia = []
     for i in range(3):
-        y = random.randint(1, x//2)
+        x = max(0, x)
+        y = random.randint(1, (x+4)//2)
         z = random.randint(1, 3)
         if z == 1:
             typ = "konnica"
-            x = x-y*2.5
+            x = x-y*2
             armia.append([typ, y])
         elif z == 2:
             typ = "piechurzy"
@@ -19,7 +20,7 @@ def losowanie_armii(x):
             typ = "artylerzysci"
             while y*3 > x:
                 y = y-1
-            x = x-y*2
+            x = x-y*1.5
             armia.append([typ, y])
     return armia
 
@@ -266,7 +267,7 @@ def bitwa():
             print(e[0], nasza_wartosc_bojowa)
             print("Twoj wynik zostanie zapisany w tabeli wynikow")
 
-            wyniki = open('wyniki.txt', 'a+')
+            wyniki = open('wynikiGraczy.txt', 'a+')
             score = walka(e, ["piechurzy", 0])*nasza_wartosc_bojowa
             wyniki.write('\n')
             wyniki.write(imie+": "+str(score)+" zwiady:"+str(zwiady))
