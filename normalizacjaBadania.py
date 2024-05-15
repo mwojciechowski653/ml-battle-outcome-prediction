@@ -26,6 +26,8 @@ for record in all_inputs:
     x.append(record[0])
 sdX = statistics.stdev(x)
 meanX = sum(x)/len(x)
+print(meanX)
+print(sdX)
 
 resultY = x
 resultX = []
