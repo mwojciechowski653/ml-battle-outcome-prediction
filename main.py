@@ -1,4 +1,4 @@
-from bitwa import bitwa
+from bitwa import bitwaGlowna
 from generatorBitw import bitwy
 
 t = 1
@@ -9,11 +9,9 @@ while t == 1:
     print("0 - zakoncz program")
     x = input("")
     try:
-        print("jestem")
         x = int(x)
-        print("jestem2")
         if x == 1:
-            bitwa()
+            bitwaGlowna()
         elif x == 2:
             bitwy(1000)
         elif x == 0:

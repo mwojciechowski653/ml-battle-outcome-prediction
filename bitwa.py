@@ -18,8 +18,6 @@ def losowanie_armii(x):
             armia.append([typ, y])
         else:
             typ = "artylerzysci"
-            while y*3 > x:
-                y = y-1
             x = x-y*1.5
             armia.append([typ, y])
     return armia
