@@ -1,6 +1,7 @@
 import numpy as np
-from funkcjeRobocze import wczytaniePliku, moje_PCA, normalizacja
 import matplotlib.pyplot as plt
+
+from funkcjeRobocze import wczytaniePliku, moje_PCA, normalizacja
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix
 from sklearn import tree
@@ -59,14 +60,22 @@ mean = 0
 # Do badania wpływu normalizacji
 
 sum = 0
+sumN = 0
 for i in range(100):
     all_inputs, all_classes = wczytaniePliku()
     all_inputs = moje_PCA(all_inputs, 5)
-    # all_inputs = normalizacja(all_inputs)
     (train_inputs, test_inputs, train_classes, test_classes) = train_test_split(all_inputs, all_classes, train_size=0.7)
 
     dtc = tree.DecisionTreeClassifier()
     dtc.fit(train_inputs, train_classes)
     predictions = dtc.predict(test_inputs)
     sum += dtc.score(test_inputs, test_classes)
+
+    train_inputs = normalizacja(train_inputs)
+    test_inputs = normalizacja(test_inputs)
+    dtc = tree.DecisionTreeClassifier()
+    dtc.fit(train_inputs, train_classes)
+    predictions = dtc.predict(test_inputs)
+    sumN += dtc.score(test_inputs, test_classes)
 print(sum/100)
+print(sumN/100)
