@@ -1,5 +1,7 @@
 # IO_projekt1
 
+> English version below / Wersja angielska poniżej
+
 ## Opis projektu
 
 Projekt **IO_projekt1** to jeden z dwóch projektów przygotowanych w języku Python jako zaliczenie przedmiotu **Inteligencja Obliczeniowa**, który miałem na czwartym semestrze studiów I stopnia na kierunku **Informatyka o profilu praktycznym**. Obejmował on między innymi zagadnienia związane ze współczesnym rozwojem sztucznej inteligencji, przede wszystkim: algorytmy klasyfikacyjne, trenowanie sieci neuronowych, sieci generatywne GAN oraz duże modele językowe (w skrócie z ang. LLM).
@@ -117,3 +119,122 @@ Projekt jest udostępniany na licencji **MIT**.
 Pełny tekst licencji znajdziesz w pliku [LICENSE](LICENSE).
 
 W skrócie: możesz używać, kopiować, modyfikować i rozpowszechniać ten kod na warunkach MIT. Oprogramowanie dostarczane jest „tak jak jest”, bez żadnych gwarancji.
+
+# IO_projekt1 English version
+
+## Project Description
+
+The **IO_projekt1** project is one of two projects developed in Python as part of the **Computational Intelligence** course I took during the fourth semester of my Bachelor’s studies in **Computer Science (practical profile)**. It covered topics related to modern AI development, including classification algorithms, neural network training, generative adversarial networks (GANs), and large language models (LLMs).
+
+The goal of the project is to compare the effectiveness of methods such as:
+
+- Naive Bayes Classifier (`Naive Bayes`)
+- K-Nearest Neighbors (`KNN`)
+- Decision Tree (`Decision Tree`)
+- Neural Networks (`Neural Networks`)
+
+Additionally:
+
+- The impact of dimensionality reduction (`PCA`) on the effectiveness of these methods
+- Data normalization
+
+The project also includes a system for generating input data (battles), storing results, and visualizing classifier performance.
+
+## Game Concept and Data Structure for Research
+
+The starting point of this project was the `bitwa.py` file, which contains a game I wrote during my first semester. It is not perfect, but as an additional challenge I decided to keep this code "untouchable" to simulate working with external code. The game is an extended version of the classic _rock, paper, scissors_, where you can deploy three types of units - _infantry_, _cavalry_, or _artillery_ - on the battlefield, one type for each wing (left wing, center, or right wing). Units have different costs and combat effectiveness against each other. After selecting the difficulty level (determining how large our budget is compared to the opponent’s), the opponent’s army is randomly generated. You can then perform reconnaissance for a fee to peek at selected wings of the opponent. Afterwards, you choose the type and number of units for each wing. The battle unfolds separately: left wing, right wing, and finally the center, where the remnants from the wings (with flanking bonuses) are considered. A pseudorandom coefficient is drawn in each fight, making outcomes not fully predictable. If you win, the final score is calculated based on the remaining units and their types. The result is saved along with the player’s name/nickname in `wynikiGraczy.txt`.
+
+The project analyzes different classification algorithms and compares their effectiveness on prepared data. The data was generated using `generatorBitw.py` and saved in `rozgrywki.txt`. Each battle is stored in 13 columns: the first 6 represent the unit types and their counts for the “player”, the next 6 for the “opponent”. The last column is the battle outcome (0 or 1), indicating whether the player’s army would win in this configuration without the pseudorandom factors (which are part of real gameplay).
+
+## Directory Structure
+
+```
+IO_projekt1/
+├── wykresy/                          # Directory with classifier performance plots
+├── badania/                          # Folder with classifier analysis scripts
+│   ├── BayesBadania.py               # Naive Bayes classifier performance analysis
+│   ├── KNNBadania.py                 # KNN classifier testing
+│   ├── drzewoDecyzyjneBadania.py     # Decision tree analysis
+│   ├── funkcjeRobocze.py             # Helper functions (e.g., normalization, PCA)
+│   ├── sieciNeuronoweBadania.py      # Neural network-based classifier analysis
+│   ├── pcaBadania.py                 # PCA analysis and variance retention
+│   └── normalizacjaBadania.py        # Data normalization
+├── bitwa.py                          # Single battle simulation logic
+├── generatorBitw.py                  # Data generator (battles) for classification
+├── main.py                           # Menu – play the game or generate data
+├── rozgrywki.txt                     # Input data containing battle scenarios
+├── wynikiGraczy.txt                  # Player results storage
+├── requirements.txt                  # Project dependencies
+├── IO1_Bitwa.pdf                     # Project documentation and research results (PDF)
+└── LICENSE                           # Project license
+```
+
+## Requirements
+
+The project requires Python 3.7 or newer and the following libraries:
+
+- `numpy`
+- `pandas`
+- `scikit-learn`
+- `matplotlib`
+- `seaborn`
+
+Installation:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Running
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/mwojciechowski653/IO_projekt1.git
+cd IO_projekt1
+```
+
+2. Create a virtual environment (optional):
+
+```bash
+python -m venv venv
+source venv/bin/activate  # Windows: .\venv\Scripts\activate
+```
+
+3. Run the main script to play the game or generate new records for research:
+
+```bash
+python main.py
+```
+
+Alternatively, run specific research scripts individually:
+
+```bash
+python KNNBadania.py
+python BayesBadania.py
+```
+
+The research scripts may contain commented-out code for analyzing specific scenarios. To enable them, uncomment the relevant block and comment out the previous one. Scenarios are independent and can be run in the same session.
+
+## Results Visualization
+
+Each research module generates plots, which for the provided data are saved in the `wykresy/` directory. For example:
+
+- `PCA` shows the percentage of variance retained depending on the number of columns preserved.
+- `PCA - Decision Tree` shows the impact of dimensionality reduction on decision tree precision.
+
+## Documentation
+
+The `IO1_Bitwa.pdf` file contains a project description, assumptions I made before starting the research, as well as results and conclusions.
+
+## Author
+
+- **Marcin Wojciechowski**\
+  [GitHub](https://github.com/mwojciechowski653)
+
+## License
+
+This project is licensed under the **MIT** license.\
+The full license text can be found in the [LICENSE](LICENSE) file.
+
+In short: you are free to use, copy, modify, and distribute this code under the MIT terms. The software is provided “as is”, without any warranty.
