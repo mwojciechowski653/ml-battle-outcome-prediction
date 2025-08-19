@@ -30,7 +30,6 @@ Projekt to analiza różnych algotytmów klasyfikacyjnych i porównanie ich skut
 
 ```
 IO_projekt1/
-├── wykresy/                          # Katalog z wykresami wyników klasyfikatorów
 ├── badania/                          # Folder zawierający pliki analizujące klasyfikatory
 │   ├── BayesBadania.py               # Badanie skuteczności klasyfikatora Bayesa
 │   ├── KNNBadania.py                 # Testowanie klasyfikatora KNN
@@ -39,15 +38,15 @@ IO_projekt1/
 │   ├── sieciNeuronoweBadania.py      # Badanie klasyfikatora opartego na sieciach neuronowych
 │   ├── pcaBadania.py                 # Analiza PCA i utraty % wariancji
 │   └── normalizacjaBadania.py        # Normalizacja danych wejściowych
+├── wykresy/                          # Katalog z wykresami wyników klasyfikatorów
+├── IO1_Bitwa.pdf                     # Dokumentacja projektu i przedstawienie wyniku badań (PDF)
+├── LICENSE                           # Licencja projektu
 ├── bitwa.py                          # Logika symulacji pojedynczej bitwy
 ├── generatorBitw.py                  # Generator danych (bitew) na potrzeby klasyfikacji
 ├── main.py                           # Menu - zagranie w grę lub wygenerowanie danych
-├── rozgrywki.txt                     # Dane wejściowe zawierające scenariusze bitew
-├── wynikiGraczy.txt                  # Zapis wyników uzyskanych przez graczy
 ├── requirements.txt                  # Wymagania i zależności potrzebne do uruchomienia projektu
-├── IO1_Bitwa.pdf                     # Dokumentacja projektu i przedstawienie wyniku badań (PDF)
-└── LICENSE                           # Licencja projektu
-
+├── rozgrywki.txt                     # Dane wejściowe zawierające scenariusze bitew
+└── wynikiGraczy.txt                  # Zapis wyników uzyskanych przez graczy
 ```
 
 ## Wymagania
@@ -150,7 +149,6 @@ The project analyzes different classification algorithms and compares their effe
 
 ```
 IO_projekt1/
-├── wykresy/                          # Directory with classifier performance plots
 ├── badania/                          # Folder with classifier analysis scripts
 │   ├── BayesBadania.py               # Naive Bayes classifier performance analysis
 │   ├── KNNBadania.py                 # KNN classifier testing
@@ -159,14 +157,15 @@ IO_projekt1/
 │   ├── sieciNeuronoweBadania.py      # Neural network-based classifier analysis
 │   ├── pcaBadania.py                 # PCA analysis and variance retention
 │   └── normalizacjaBadania.py        # Data normalization
+├── wykresy/                          # Directory with classifier performance plots
+├── IO1_Bitwa.pdf                     # Project documentation and research results (PDF)
+├── LICENSE                           # Project license
 ├── bitwa.py                          # Single battle simulation logic
 ├── generatorBitw.py                  # Data generator (battles) for classification
 ├── main.py                           # Menu – play the game or generate data
-├── rozgrywki.txt                     # Input data containing battle scenarios
-├── wynikiGraczy.txt                  # Player results storage
 ├── requirements.txt                  # Project dependencies
-├── IO1_Bitwa.pdf                     # Project documentation and research results (PDF)
-└── LICENSE                           # Project license
+├── rozgrywki.txt                     # Input data containing battle scenarios
+└── wynikiGraczy.txt                  # Player results storage
 ```
 
 ## Requirements
