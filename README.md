@@ -63,7 +63,7 @@ Projekt wymaga Pythona 3.7 lub nowszego oraz następujących bibliotek:
 Instalacja:
 
 ```bash
-pip install -r requirements.txt
+pip install -r src/requirements.txt
 ```
 
 ## Uruchomienie
@@ -183,7 +183,7 @@ The project requires Python 3.7 or newer and the following libraries:
 Installation:
 
 ```bash
-pip install -r requirements.txt
+pip install -r src/requirements.txt
 ```
 
 ## Running
