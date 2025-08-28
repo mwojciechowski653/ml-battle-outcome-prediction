@@ -30,23 +30,24 @@ Projekt to analiza różnych algotytmów klasyfikacyjnych i porównanie ich skut
 
 ```
 IO_projekt1/
-├── badania/                          # Folder zawierający pliki analizujące klasyfikatory
-│   ├── BayesBadania.py               # Badanie skuteczności klasyfikatora Bayesa
-│   ├── KNNBadania.py                 # Testowanie klasyfikatora KNN
-│   ├── drzewoDecyzyjneBadania.py     # Badania nad drzewem decyzyjnym
-│   ├── funkcjeRobocze.py             # Funkcje pomocnicze (np. normalizacja, PCA)
-│   ├── sieciNeuronoweBadania.py      # Badanie klasyfikatora opartego na sieciach neuronowych
-│   ├── pcaBadania.py                 # Analiza PCA i utraty % wariancji
-│   └── normalizacjaBadania.py        # Normalizacja danych wejściowych
-├── wykresy/                          # Katalog z wykresami wyników klasyfikatorów
-├── IO1_Bitwa.pdf                     # Dokumentacja projektu i przedstawienie wyniku badań (PDF)
-├── LICENSE                           # Licencja projektu
-├── bitwa.py                          # Logika symulacji pojedynczej bitwy
-├── generatorBitw.py                  # Generator danych (bitew) na potrzeby klasyfikacji
-├── main.py                           # Menu - zagranie w grę lub wygenerowanie danych
-├── requirements.txt                  # Wymagania i zależności potrzebne do uruchomienia projektu
-├── rozgrywki.txt                     # Dane wejściowe zawierające scenariusze bitew
-└── wynikiGraczy.txt                  # Zapis wyników uzyskanych przez graczy
+├── src/                                  # Folder zawierający caly projekt
+│   ├── badania/                          # Folder zawierający pliki analizujące klasyfikatory
+│   │   ├── BayesBadania.py               # Badanie skuteczności klasyfikatora Bayesa
+│   │   ├── KNNBadania.py                 # Testowanie klasyfikatora KNN
+│   │   ├── drzewoDecyzyjneBadania.py     # Badania nad drzewem decyzyjnym
+│   │   ├── funkcjeRobocze.py             # Funkcje pomocnicze (np. normalizacja, PCA)
+│   │   ├── sieciNeuronoweBadania.py      # Badanie klasyfikatora opartego na sieciach neuronowych
+│   │   ├── pcaBadania.py                 # Analiza PCA i utraty % wariancji
+│   │   └── normalizacjaBadania.py        # Normalizacja danych wejściowych
+│   ├── bitwa.py                          # Logika symulacji pojedynczej bitwy
+│   ├── generatorBitw.py                  # Generator danych (bitew) na potrzeby klasyfikacji
+│   ├── main.py                           # Menu - zagranie w grę lub wygenerowanie danych
+│   ├── requirements.txt                  # Wymagania i zależności potrzebne do uruchomienia projektu
+│   ├── rozgrywki.txt                     # Dane wejściowe zawierające scenariusze bitew
+│   └── wynikiGraczy.txt                  # Zapis wyników uzyskanych przez graczy
+├── wykresy/                              # Katalog z wykresami wyników klasyfikatorów
+├── IO1_Bitwa.pdf                         # Dokumentacja projektu i przedstawienie wyniku badań (PDF)
+└── LICENSE                               # Licencja projektu
 ```
 
 ## Wymagania
@@ -84,14 +85,14 @@ source venv/bin/activate  # Windows: .\venv\Scripts\activate
 3. Uruchom główny skrypt aby zagrać lub wygenerować nowe rekordy do badań:
 
 ```bash
-python main.py
+python src/main.py
 ```
 
 Alternatywnie, uruchamiaj konkretne badania pojedynczo:
 
 ```bash
-python KNNBadania.py
-python BayesBadania.py
+python src/KNNBadania.py
+python src/BayesBadania.py
 ```
 
 Kod plików zawierających badania może zawierać zakomentowany kod analizujący inne, konkretne scenariusze. Aby zadziałał należy odkomentować odpowiedni blok kodu i zakomentować poprzedni scenariusz. Scenariusze są od siebie niezależne i można uruchamiać kilka w ramach jednego uruchomienia.
@@ -149,23 +150,24 @@ The project analyzes different classification algorithms and compares their effe
 
 ```
 IO_projekt1/
-├── badania/                          # Folder with classifier analysis scripts
-│   ├── BayesBadania.py               # Naive Bayes classifier performance analysis
-│   ├── KNNBadania.py                 # KNN classifier testing
-│   ├── drzewoDecyzyjneBadania.py     # Decision tree analysis
-│   ├── funkcjeRobocze.py             # Helper functions (e.g., normalization, PCA)
-│   ├── sieciNeuronoweBadania.py      # Neural network-based classifier analysis
-│   ├── pcaBadania.py                 # PCA analysis and variance retention
-│   └── normalizacjaBadania.py        # Data normalization
-├── wykresy/                          # Directory with classifier performance plots
-├── IO1_Bitwa.pdf                     # Project documentation and research results (PDF)
-├── LICENSE                           # Project license
-├── bitwa.py                          # Single battle simulation logic
-├── generatorBitw.py                  # Data generator (battles) for classification
-├── main.py                           # Menu – play the game or generate data
-├── requirements.txt                  # Project dependencies
-├── rozgrywki.txt                     # Input data containing battle scenarios
-└── wynikiGraczy.txt                  # Player results storage
+├── src/                                  # Folder with whole project
+│   ├── badania/                          # Folder with classifier analysis scripts
+│   │   ├── BayesBadania.py               # Naive Bayes classifier performance analysis
+│   │   ├── KNNBadania.py                 # KNN classifier testing
+│   │   ├── drzewoDecyzyjneBadania.py     # Decision tree analysis
+│   │   ├── funkcjeRobocze.py             # Helper functions (e.g., normalization, PCA)
+│   │   ├── sieciNeuronoweBadania.py      # Neural network-based classifier analysis
+│   │   ├── pcaBadania.py                 # PCA analysis and variance retention
+│   │   └── normalizacjaBadania.py        # Data normalization
+│   ├── bitwa.py                          # Single battle simulation logic
+│   ├── generatorBitw.py                  # Data generator (battles) for classification
+│   ├── main.py                           # Menu – play the game or generate data
+│   ├── requirements.txt                  # Project dependencies
+│   ├── rozgrywki.txt                     # Input data containing battle scenarios
+│   └── wynikiGraczy.txt                  # Player results storage
+├── wykresy/                              # Directory with classifier performance plots
+├── IO1_Bitwa.pdf                         # Project documentation and research results (PDF)
+└── LICENSE                               # Project license
 ```
 
 ## Requirements
@@ -203,14 +205,14 @@ source venv/bin/activate  # Windows: .\venv\Scripts\activate
 3. Run the main script to play the game or generate new records for research:
 
 ```bash
-python main.py
+python src/main.py
 ```
 
 Alternatively, run specific research scripts individually:
 
 ```bash
-python KNNBadania.py
-python BayesBadania.py
+python src/KNNBadania.py
+python src/BayesBadania.py
 ```
 
 The research scripts may contain commented-out code for analyzing specific scenarios. To enable them, uncomment the relevant block and comment out the previous one. Scenarios are independent and can be run in the same session.
@@ -228,12 +230,12 @@ The `IO1_Bitwa.pdf` file contains a project description, assumptions I made befo
 
 ## Author
 
-- **Marcin Wojciechowski**\
+- **Marcin Wojciechowski**
   [GitHub](https://github.com/mwojciechowski653)
 
 ## License
 
-This project is licensed under the **MIT** license.\
+This project is licensed under the **MIT** license.
 The full license text can be found in the [LICENSE](LICENSE) file.
 
 In short: you are free to use, copy, modify, and distribute this code under the MIT terms. The software is provided “as is”, without any warranty.
