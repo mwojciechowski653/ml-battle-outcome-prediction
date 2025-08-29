@@ -122,6 +122,8 @@ The full license text can be found in the [LICENSE](LICENSE) file.
 
 In short: you are free to use, copy, modify, and distribute this code under the MIT terms. The software is provided “as is”, without any warranty.
 
+---
+
 # ML Battle Outcome Prediction wersja po polsku
 
 ## Opis projektu
