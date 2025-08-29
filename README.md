@@ -31,7 +31,7 @@ The project analyzes different classification algorithms and compares their effe
 ## Directory Structure
 
 ```
-IO_projekt1/
+ml-battle-outcome-prediction/
 ├── src/                                  # Folder with whole project
 │   ├── badania/                          # Folder with classifier analysis scripts
 │   │   ├── BayesBadania.py               # Naive Bayes classifier performance analysis
@@ -65,16 +65,16 @@ The project requires Python 3.7 or newer and the following libraries:
 Installation:
 
 ```bash
-pip install -r requirements.txt
+pip install -r src/requirements.txt
 ```
 
-## Running
+## Running the Project
 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/mwojciechowski653/IO_projekt1.git
-cd IO_projekt1
+git clone https://github.com/mwojciechowski653/ml-battle-outcome-prediction.git
+cd ml-battle-outcome-prediction
 ```
 
 2. Create a virtual environment (optional):
@@ -128,7 +128,7 @@ In short: you are free to use, copy, modify, and distribute this code under the 
 
 ## Opis projektu
 
-Projekt **IO_projekt1** to jeden z dwóch projektów przygotowanych w języku Python jako zaliczenie przedmiotu **Inteligencja Obliczeniowa**, który miałem na czwartym semestrze studiów I stopnia na kierunku **Informatyka o profilu praktycznym**. Obejmował on między innymi zagadnienia związane ze współczesnym rozwojem sztucznej inteligencji, przede wszystkim: algorytmy klasyfikacyjne, trenowanie sieci neuronowych, sieci generatywne GAN oraz duże modele językowe (w skrócie z ang. LLM).
+Projekt **ml-battle-outcome-prediction** to jeden z dwóch projektów przygotowanych w języku Python jako zaliczenie przedmiotu **Inteligencja Obliczeniowa**, który miałem na czwartym semestrze studiów I stopnia na kierunku **Informatyka o profilu praktycznym**. Obejmował on między innymi zagadnienia związane ze współczesnym rozwojem sztucznej inteligencji, przede wszystkim: algorytmy klasyfikacyjne, trenowanie sieci neuronowych, sieci generatywne GAN oraz duże modele językowe (w skrócie z ang. LLM).
 
 Celem projektu jest porównanie skuteczności takich metod jak:
 
@@ -153,7 +153,7 @@ Projekt to analiza różnych algotytmów klasyfikacyjnych i porównanie ich skut
 ## Struktura katalogu
 
 ```
-IO_projekt1/
+ml-battle-outcome-prediction/
 ├── src/                                  # Folder zawierający caly projekt
 │   ├── badania/                          # Folder zawierający pliki analizujące klasyfikatory
 │   │   ├── BayesBadania.py               # Badanie skuteczności klasyfikatora Bayesa
@@ -187,7 +187,7 @@ Projekt wymaga Pythona 3.7 lub nowszego oraz następujących bibliotek:
 Instalacja:
 
 ```bash
-pip install -r requirements.txt
+pip install -r src/requirements.txt
 ```
 
 ## Uruchomienie
@@ -195,8 +195,8 @@ pip install -r requirements.txt
 1. Sklonuj repozytorium:
 
 ```bash
-git clone https://github.com/mwojciechowski653/IO_projekt1.git
-cd IO_projekt1
+git clone https://github.com/mwojciechowski653/ml-battle-outcome-prediction.git
+cd ml-battle-outcome-prediction
 ```
 
 2. Uruchom środowisko wirtualne (opcjonalnie):
